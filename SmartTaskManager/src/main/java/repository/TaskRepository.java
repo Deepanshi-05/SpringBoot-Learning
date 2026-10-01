@@ -2,6 +2,8 @@ package repository;
 
 import model.Task;
 
+import java.util.List;
+
 public interface TaskRepository {
     Task getTask(int id);
 
@@ -9,4 +11,7 @@ public interface TaskRepository {
     void updateTask(Task task);
     void deleteTask(int id);
 
+    void markTaskCompleted(int id);
+
+    List<Task> getAllTasks();
 }
